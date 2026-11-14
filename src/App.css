@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+:root {
+  --primary-text-color: #00827f;
+  --secondary-text-color: #898d82;
+  --primary-background-color: #fffefa;
+  --secondary-background-color: #eeefe8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.page {
+  display: grid;
   min-height: 100vh;
+  place-items: center;
+  padding: 48px 20px;
+  background: url('../public/memorybookoverhaul-wallpaper.png') center / cover fixed no-repeat;
+}
+
+.checklist-card {
+  width: min(100%, 560px);
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--primary-background-color);
+}
+
+.card-border {
   display: flex;
-  flex-direction: column;
+}
+
+.card-border img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.progress-section {
+  margin: 0 45px;
+  padding: 20px 0 20px;
+}
+
+.progress-copy {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-label {
+  color: var(--primary-text-color);
+}
+
+.progress-count {
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.progress-count span {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+}
+
+.progress-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--secondary-background-color);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary-text-color);
+  transition: width 240ms ease;
+}
+
+.progress-message {
+  margin: 9px 0 0;
+  color: var(--secondary-text-color);
+  font-size: 11px;
+}
+
+.reset-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 12px 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.reset-button {
+  padding: 7px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 150ms ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset-button:hover:not(:disabled) {
+  color: var(--primary-text-color);
+}
+
+.reset-button:disabled {
+  color: var(--secondary-text-color);
+  cursor: default;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0 28px;
+  list-style: none;
+}
+
+.task-item {
+  border-bottom: 1px solid var(--secondary-background-color);
+}
+
+.task-item:last-child {
+  border-bottom: 0;
+}
+
+.task-label {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.task-label:hover {
+  background: var(--secondary-background-color);
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+  accent-color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+.task-copy {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+}
+
+.task-title {
+  color: var(--primary-text-color);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-detail {
+  color: var(--secondary-text-color);
+  font-size: 11px;
+}
+
+.is-completed .task-title {
+  color: var(--secondary-text-color);
+  text-decoration: line-through;
+  text-decoration-color: var(--secondary-text-color);
 }
