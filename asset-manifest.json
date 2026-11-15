@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mabinogi-daily-checklist/static/css/main.e0ba0b67.css",
+    "main.js": "/mabinogi-daily-checklist/static/js/main.9207acea.js",
+    "static/js/453.3802a5f9.chunk.js": "/mabinogi-daily-checklist/static/js/453.3802a5f9.chunk.js",
+    "static/media/memorybookoverhaul-wallpaper.png": "/mabinogi-daily-checklist/static/media/memorybookoverhaul-wallpaper.6650b977a62282dbb015.png",
+    "index.html": "/mabinogi-daily-checklist/index.html",
+    "main.e0ba0b67.css.map": "/mabinogi-daily-checklist/static/css/main.e0ba0b67.css.map",
+    "main.9207acea.js.map": "/mabinogi-daily-checklist/static/js/main.9207acea.js.map",
+    "453.3802a5f9.chunk.js.map": "/mabinogi-daily-checklist/static/js/453.3802a5f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0ba0b67.css",
+    "static/js/main.9207acea.js"
+  ]
+}
